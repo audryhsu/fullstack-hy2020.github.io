@@ -280,7 +280,7 @@ test('clicking the button calls event handler once', async () => {
   )
 
   const button = screen.getByText('make not important')
-  userEvent.click(button)
+  await userEvent.click(button)
 
   expect(mockHandler.mock.calls).toHaveLength(1)
 })
